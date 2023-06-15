@@ -331,6 +331,18 @@ Si中，导致Cu/Ru/Si体系的降解。
 
 
 \section{基于AS-ALD工艺的Ru互连}
+属化结构中的气孔是连接两层Cu互连线的短垂直导体（图\ref{Fig:7}(a)）。 Vias还需要一个类似于沟槽
+的内衬里层。通道底部的扩散势垒只分隔两个Cu区域，不是必要的；然而，由于Cu互连的大马士革工艺
+电阻增加。因此，对于不断缩小的半导体器件，需要消除通道底部的扩散屏障，并实现一个仅在
+通道和沟槽的侧壁上生长铜扩散阻挡层表面。这种无底阻挡层可以在不减少侧壁阻挡层膜厚度的情况下降低总阻挡层
+膜厚度。由于电流传输特性，底部阻挡层的电阻率对整个铜互连起着重要作用，通过无底阻挡层
+工艺可以直接消除底部阻挡层的影响，提升整个互连通路的电阻率。因此，通过消除互连通道底部的
+扩散屏障，可以降低互连电阻。
+
+
+为了实现无底阻挡层互连工艺需要采用区域选择性原子层沉积(AS-ALD)工艺，AS-ALD工艺
+的原理使用钝化表面的抑制剂。当抑制剂被吸附在表面时，它们抑制前体在表面的吸附，导致薄膜生
+长过程中成核延迟。
 
 
 \begin{figure}[htb]
@@ -341,7 +353,33 @@ Si中，导致Cu/Ru/Si体系的降解。
 \end{figure}
 
 
+
+一般的阻挡层TaN等使用ALD工艺需要在$300^oC$的条件下，但是AS-ALD的选择性抑制剂所能承受的
+最高温度是要小于$120^oC$的。所以在这里选择在侧壁的阻挡层为ZnO。铜向氧化锌的扩散需要在高温下进行热处理
+($> 1000^oC$)铜在氧化锌中的扩散系数$\approx 2 \times 10^{-12}cm^2 \quad s ^{-1}$在$1000^oC$。
+相比于TaN阻挡层($\approx 1 \times 10^{-14} cm^2\quad s^{-1}$)略有降低，但是相对于硅
+来说则具有绝对的优势($\approx 1 \times 10^{-4} cm^2 \quad s^{-1}$)。
+此外，氧化锌与二氧化硅在界面上反应形成Zn2SiO4。$Zn_2SiO_4$提高了氧化锌和二氧化硅之间的界面粘附能。
+由于ZnO对$SiO_2$的粘附性强弥补了Ru对于low-k材料粘附性不足的缺点。
+
+
+如图\ref{Fig:7}(b)，是本文中进行铜互连的工艺结构图，分别利用ZnO作为侧壁的阻挡层与利用Ru金属
+作为底部阻挡层，这样分别利用了ZnO与low-k材料的强粘附性与Ru与Cu之间的粘附性，克服了Ru金属阻挡层
+的问题，同时因为Ru直接与Cu相互接触，这就可以最大化利用Ri的低电阻率Cu的直接电镀。
+
+
+
 \subsection{DDT选择性验证}
+
+
+\subsubsection{DDT选择性吸附}
+
+使用水接触角（WCA）测量值分析了在$120°C$下DDT暴露后Cu和二氧化硅底物表面条件的变化
+（图\ref{Fig:8}）。Cu底物上的WCA随着暴露时间的增加而增加，在15s后在$\approx 107°$时
+饱和。相比之下，二氧化硅底物上的WCA在90秒内没有变化。仅在Cu底物上WCA值的增加间接表明
+在Cu上的选择性吸附，而在二氧化硅底物上不存在选择性吸附。利用WCA测量暴露的Cu表面在DDT中，
+分析了吸附在Cu上的热稳定性。在120°C下，甚至
+在16 h后，WCA值也没有变化，说明在氧化锌沉积温度下，DDT在Cu表面具有良好的热稳定性。
 
 
 \begin{figure}[htb]
@@ -361,9 +399,11 @@ Si中，导致Cu/Ru/Si体系的降解。
 \end{figure}
 
 
-
-\subsubsection{DDT选择性吸附}
-
+利用x射线光电子能谱（XPS）对这些底物进行了分析，以确定对DDT的选择性吸附。如图\ref{Fig:9}
+显示了在ddt暴露的Cu和二氧化硅底物上的$S\quad {2p}$峰在$158-170eV$范围内的高分辨率XPS光谱。
+可以观察到峰被分配给了与铜结合的DDT中，在162.1和163.1 eV处分别观察到2个$p_{3/2}$峰和$2个p_{1/2}$
+峰。然而，在二氧化硅底物中没有观察到S XPS峰。WCA和XPS结果证实，DDT被选择性地吸附在Cu
+底物上，而不吸附在二氧化硅底物上。
 
 \begin{figure}[htb]
 	\centering
@@ -388,43 +428,42 @@ Si中，导致Cu/Ru/Si体系的降解。
 \end{figure}
 
 
+为了评价DDT对氧化锌沉积在Cu表面的阻断能力，分别以二乙基锌（DEZ）和水为前驱体和反应物，
+在120°C下对DDT暴露的Cu和二氧化硅表面进行了氧化锌ALD检测。DEZ和水的脉冲时间各为1s，用x
+射线反射法（XRR）、扫描电镜（SEM）、透射电镜（TEM）和XPS分析不同氧化锌ALD循环后DDT暴露
+底上氧化锌的厚度和Zn的原子浓度。
+如图\ref{Fig:10}所示在ddt暴露的二氧化硅表面上测量的氧化锌厚度呈线性增加，
+并且在外推的厚度数据中几乎没有成核延迟。
+而在图\ref{Fig:11}和\ref{Fig:12}中只有生长超过100个循环的情况下才会体现出ZnO的在经过
+DDT暴露的表面生长，在100循环以下并不会进行生长。而使用Zn对暴露于ddt中的Cu和二氧化硅的
+原子组成比作为ALD循环次数的函数计算出的选择性。即使循环100次$\approx 20nm$，选择性仍保持
+在90\%以上，选择性随着ALD循环次数的增加而降低，循环200次时$\approx 80\%$。
 
-\subsubsection{DDT去除}
-
-
-\begin{figure}[htb]
-	\centering
-	\begin{minipage}[t]{0.5\textwidth}
-	\centering
-	\includegraphics[width=0.8\textwidth]{13.jpg}
-	\caption{经过$H_2$条件下$150^oC \quad 5 min$处理后的Cu表面的浸润角测量}
-	\label{Fig:13}
-	\end{minipage}
-	\begin{minipage}[t]{0.45\textwidth}
-	\centering
-	\includegraphics[width=0.8\textwidth]{14.jpg}
-	\caption{经过$H_2$条件下$150^oC \quad 5 min$处理后的表面XPS光谱，右上角小窗为Cu表面，其他部分为$SiO_2$表面}
-	\label{Fig:14}
-	\end{minipage}
-\end{figure}
-
-
-
+这表明DDT暴露有效地阻止了氧化锌在铜上的沉积。
 
 
 \subsection{AS-ALD选择性生长}
 
+图\ref{Fig:15}, \ref{Fig:16}, \ref{Fig:17}, \ref{Fig:18}显示，通过TEM与EDSmapping的方式
+对于ZnO的生长进行表征发现,
+ALD-ZnO在暴露于DDT的二氧化硅底物上生长良好，与预期结果一致。
+然而，ALD-ZnO在暴露于DDT的Cu衬底物上没有生长，即使经过150次循环，也只
+有几nm的ALD-ZnO薄膜沉积。采用XRD测量方法分析了在ddt暴露的Cu上沉积150次
+循环后的ALD-ZnO薄膜的厚度。氧化锌的厚度为$\approx 2nm$。结果表明，经过150次循环后，ALD-
+ZnO在DDT暴露的铜上沉积，但与二氧化硅暴露的ALD-ZnO相比，其厚度极薄。这些结果进一步
+支持了氧化锌在DDT暴露的二氧化硅上的选择性沉积，而不是在Cu上。
+
 
 \begin{figure}[htb]
 	\centering
 	\begin{minipage}[t]{0.45\textwidth}
 	\centering
-	\includegraphics[width=0.8\textwidth]{15.jpg}
+	\includegraphics[width=1\textwidth]{15.jpg}
 	\label{Fig:15}
 	\end{minipage}
 	\begin{minipage}[t]{0.45\textwidth}
 	\centering
-	\includegraphics[width=0.9\textwidth]{16.jpg}
+	\includegraphics[width=1\textwidth]{16.jpg}
 	\label{Fig:16}
 	\end{minipage}
 	\begin{minipage}[t]{0.45\textwidth}
@@ -442,6 +481,15 @@ Si中，导致Cu/Ru/Si体系的降解。
 	 (d)在DDT浸泡后的Cu生长ZnO-ALD(50 cycles)}
 \end{figure}
 
+
+
+氧化锌通过DDT在Cu表面的选择性吸附，在120°C下选择性地沉积在二氧化硅上，而不是在Cu上。
+$H_2$等离子体处理在150°C下成功去除DDT5 min，并使无抑制剂的Cu表面再生。随后，用三甲基
+（三甲基乙烷）钌[Ru(TMM)(CO)3]和O2作为前体和反应物，在220°C下对氧化锌和DDT去除
+的铜表面进行ALD生长Ru，培养高导电的铜衬层/种子层。XRD检测50次循环后Ru的厚度，100、150、
+200次循环后Ru的厚度，测量结果如图\ref{Fig:19}所示，经过移除DDT后的Cu表面与直接在ZnO表面
+生长Ru材料都是一样的线性增加，成核延迟相对很短。同时在两个体系中ALD生长出来的Ru都具备
+相同的晶向，说明了生长的均一性如图\ref{Fig:20}所示。
 
 
 \begin{figure}[htb]
@@ -473,11 +521,23 @@ Si中，导致Cu/Ru/Si体系的降解。
 \end{figure}
 
 
+图\ref{Fig:26}展示了在Cu/Ru/ZnO/Si体系中通过逐渐改变ZnO厚度观察最高退火温度的下XRD图谱，
+可以观察到随着ZnO的厚度从0nm提升到2nm的过程中退火温度逐渐从$550^oC$提升到了$750^oC$，
+这样的当XRD出现杂峰情况下可以通过匹配识别出Cu的硅化物，进而确认体系已经失效。
+
+
+图\ref{Fig:26} (d) 展示了不同ZnO厚度中随着退火温度变化的房租变化，可以观察到整个体系在
+失效之前方阻都维持在$10 \Omega$以下，所以ZnO厚度可以提升体系的稳定性，且对于电阻率没有任何
+的影响，经过实验可以发现ZnO 2nm的体系可以至少维持到$700^oC$不失效。
+
 
 
 \section{Ru阻挡层工艺与其他工艺对比}
 
 
+通过AS-ALD工艺方法将ZnO与Ru各自的特性结合，实现了对于low-k介质的强粘附性、对于Cu的强粘附性与
+串联的极低电导率，相对于传统的阻挡层材料，Ru阻挡层具有相对最低的电阻率、极高的失效温度和较短
+的退火时间。总的来说Ru互连是一个前景广阔的阻挡层，在未来的研究中将会扮演举足轻重的作用。
 \begin{figure}[htb]
 	\centering
 	\includegraphics[width=0.8\textwidth]{25.jpg}
@@ -552,5 +612,5 @@ Si中，导致Cu/Ru/Si体系的降解。
 
 \newpage
 \addcontentsline{toc}{section}{参考文献}
-\bibliography{course-template}%记得需要F8
+\bibliography{cu.bib}%记得需要F8
 \end{document}
